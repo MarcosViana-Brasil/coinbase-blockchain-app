@@ -34,7 +34,8 @@ const Header = ({ walletAddress, sanityTokens, thirdWebTokens }) => {
                 <WalletLink>
                     <WalletLinkTtitle>Wallet Connected</WalletLinkTtitle>
                     <WalletAddress>
-                        {walletAddress.slice(0, 7)}...{walletAddress.slice(35)}
+                        {walletAddress.substr(0, 7)}...
+                        {walletAddress.substr(29, 7)}
                     </WalletAddress>
                 </WalletLink>
                 <Button style={{ backgroundColor: '#3773f5', color: '#000' }}>
