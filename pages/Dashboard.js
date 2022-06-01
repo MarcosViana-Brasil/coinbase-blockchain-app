@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import { ethers } from 'ethers'
 import { ThirdwebSDK } from '@3rdweb/sdk'
+import { ethers } from 'ethers'
+import styled from 'styled-components'
 
 import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
@@ -36,9 +36,6 @@ const Dashboard = ({ address }) => {
         }
         getSanityAndThirdWebTokens()
     }, [])
-
-    // console.log('Sanity 👉', sanityTokens)
-    // console.log('Thirdweb 👉', thirdWebTokens)
 
     return (
         <Wrapper>

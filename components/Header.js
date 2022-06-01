@@ -33,10 +33,16 @@ const Header = ({ walletAddress, sanityTokens, thirdWebTokens }) => {
             <ButtonsContainer>
                 <WalletLink>
                     <WalletLinkTtitle>Wallet Connected</WalletLinkTtitle>
-                    <WalletAddress>
-                        {walletAddress.substr(0, 7)}...
-                        {walletAddress.substr(29, 7)}
-                    </WalletAddress>
+                    {walletAddress ? (
+                        <WalletAddress>
+                            {walletAddress.slice(0, 7)}...
+                            {walletAddress.slice(35)}
+                        </WalletAddress>
+                    ) : (
+                        <Button onClick={() => connectWallet('injected')}>
+                            Connect Wallet
+                        </Button>
+                    )}
                 </WalletLink>
                 <Button style={{ backgroundColor: '#3773f5', color: '#000' }}>
                     By / Sell
